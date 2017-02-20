@@ -13,4 +13,8 @@ defmodule FizzbuzzTest do
   test "replaces 3 with fizz" do
     assert Fizzbuzz.replace(3) == "fizz"
   end
+
+  test "replaces 5 by buzz" do
+    assert Fizzbuzz.replace(5) == "buzz"
+  end
 end
