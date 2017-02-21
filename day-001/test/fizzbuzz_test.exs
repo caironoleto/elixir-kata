@@ -58,11 +58,11 @@ defmodule FizzbuzzTest do
     assert Fizzbuzz.replace(21) == "fizz"
   end
 
-  test "returns 49, b/c 49 is not divisible by 3 or 5" do
-    assert Fizzbuzz.replace(49) == 49
-  end
-
   test "replaces 30 by fizzbuzz" do
     assert Fizzbuzz.replace(30) == "fizzbuzz"
+  end
+
+  test "returns 49, b/c 49 is not divisible by 3 or 5" do
+    assert Fizzbuzz.replace(49) == 49
   end
 end
