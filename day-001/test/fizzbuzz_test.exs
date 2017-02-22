@@ -65,4 +65,10 @@ defmodule FizzbuzzTest do
   test "returns 49, b/c 49 is not divisible by 3 or 5" do
     assert Fizzbuzz.replace(49) == 49
   end
+
+  test "accepts only integer param" do
+    assert_raise FunctionClauseError, fn ->
+      Fizzbuzz.replace("sobrinho")
+    end
+  end
 end
