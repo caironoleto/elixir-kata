@@ -1,7 +1,7 @@
 defmodule Jokenpo do
-  def winner(moves) do
-    case(moves) do
-      [:rock, :paper] -> :paper
+  def winner([:rock, other]) do
+    cond do
+      true -> other
     end
   end
 end

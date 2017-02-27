@@ -2,7 +2,9 @@ defmodule JokenpoTest do
   use ExUnit.Case
   doctest Jokenpo
 
-  test "given a list of moves, returns the winner" do
-    assert Jokenpo.winner([:rock, :paper]) == :paper
+  describe "when the first move is rock" do
+    test "returns :paper when the other move is :paper" do
+      assert Jokenpo.winner([:rock, :paper]) == :paper
+    end
   end
 end
