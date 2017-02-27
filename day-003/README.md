@@ -10,3 +10,4 @@ Description from Wikipedia (https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%
 
 - Using pattern matching to create the rules;
 - Using cond to check the move;
+- Using `describe` to group test units;
