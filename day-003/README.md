@@ -1,19 +1,12 @@
-# Jokenpo
+# Day 003
 
-**TODO: Add description**
+## Jokenpo (http://dojopuzzles.com/problemas/exibe/jokenpo/)
 
-## Installation
+Rock-paper-scissors or Scissor-Paper-Rock, is a zero-sum hand game usually played between two people, in which each player simultaneously forms one of three shapes with an outstretched hand. These shapes are "rock" (✊ a simple fist), "paper" (✋ a flat hand), and "scissors" (✌️ a fist with the index and middle fingers together forming a V). The game has only three possible outcomes other than a tie: a player who decides to play rock will beat another player who has chosen scissors ("rock crushes scissors") but will lose to one who has played paper ("paper covers rock"); a play of paper will lose to a play of scissors ("scissors cut paper"). If both players choose the same shape, the game is tied and is usually immediately replayed to break the tie. Other names for the game in the English-speaking world include roshambo and other orderings of the three items, sometimes with "rock" being called "stone".
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `jokenpo` to your list of dependencies in `mix.exs`:
+Description from Wikipedia (https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors)
 
-```elixir
-def deps do
-  [{:jokenpo, "~> 0.1.0"}]
-end
-```
+## Elixir challenges and my notes
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/jokenpo](https://hexdocs.pm/jokenpo).
-
+- Using pattern matching to create the rules;
+- Using cond to check the move;
