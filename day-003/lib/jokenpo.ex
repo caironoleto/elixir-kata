@@ -6,4 +6,12 @@ defmodule Jokenpo do
       true -> other
     end
   end
+
+  def winner([:paper, other]) do
+    cond do
+      other == :rock -> :paper
+      other == :paper -> :draw
+      true -> other
+    end
+  end
 end
