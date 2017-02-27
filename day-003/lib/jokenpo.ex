@@ -14,4 +14,12 @@ defmodule Jokenpo do
       true -> other
     end
   end
+
+  def winner([:scissor, other]) do
+    cond do
+      other == :paper -> :scissor
+      other == :scissor -> :draw
+      true -> other
+    end
+  end
 end

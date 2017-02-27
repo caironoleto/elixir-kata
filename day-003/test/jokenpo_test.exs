@@ -29,4 +29,18 @@ defmodule JokenpoTest do
       assert Jokenpo.winner([:paper, :paper]) == :draw
     end
   end
+
+  describe "when the first move is scissor" do
+    test "returns :scissor when the other move is :paper" do
+      assert Jokenpo.winner([:scissor, :paper]) == :scissor
+    end
+
+    test "returns :rock when the other move is :rock" do
+      assert Jokenpo.winner([:scissor, :rock]) == :rock
+    end
+
+    test "returns :draw when the other move is :scissor" do
+      assert Jokenpo.winner([:scissor, :scissor]) == :draw
+    end
+  end
 end
