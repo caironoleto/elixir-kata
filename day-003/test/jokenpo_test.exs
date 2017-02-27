@@ -10,5 +10,9 @@ defmodule JokenpoTest do
     test "returns :paper when the other move is :paper" do
       assert Jokenpo.winner([:rock, :paper]) == :paper
     end
+
+    test "returns :draw when the other move is :rock" do
+      assert Jokenpo.winner([:rock, :rock]) == :draw
+    end
   end
 end
