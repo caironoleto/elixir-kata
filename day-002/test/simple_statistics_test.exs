@@ -13,4 +13,8 @@ defmodule SimpleStatisticsTest do
   test "process a list with four elements" do
     assert SimpleStatistics.analyze([2, 4, 10, 20]) == [minimum: 2, maximum: 20, size: 4, mean: 9.0]
   end
+
+  test "process a list with negative element" do
+    assert SimpleStatistics.analyze([-9, 2, 4, 10, 20, 100]) == [minimum: -9, maximum: 100, size: 6, mean: 21.166666666666668]
+  end
 end
