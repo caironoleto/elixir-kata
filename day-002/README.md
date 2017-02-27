@@ -1,19 +1,10 @@
-# SimpleStatistics
+# Day 002
 
-**TODO: Add description**
+## Simple statistics (http://dojopuzzles.com/problemas/exibe/calculando-estatisticas-simples/)
 
-## Installation
+Given a list of integers, returns simple statistics about it.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `simple_statistics` to your list of dependencies in `mix.exs`:
+## Elixir challenges and my notes
 
-```elixir
-def deps do
-  [{:simple_statistics, "~> 0.1.0"}]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/simple_statistics](https://hexdocs.pm/simple_statistics).
-
+- Using a private function;
+- Using Enum.min/2, Enum.max/1, Enum.sum/1;
