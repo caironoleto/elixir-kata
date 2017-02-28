@@ -23,12 +23,17 @@ defmodule RomanNumeralTest do
   test "converts XXI to 21", do: assert to_number("XXI") == 21
   test "converts XXII to 22", do: assert to_number("XXII") == 22
   test "converts XXIII to 23", do: assert to_number("XXIII") == 23
+  test "converts XXIV to 24", do: assert to_number("XXIV") == 24
+
   test "converts XXX to 30", do: assert to_number("XXX") == 30
   test "converts XXXI to 31", do: assert to_number("XXXI") == 31
   test "converts XXXII to 32", do: assert to_number("XXXII") == 32
   test "converts XXXIII to 33", do: assert to_number("XXXIII") == 33
+  test "converts XXXIV to 34", do: assert to_number("XXXIV") == 34
+  test "converts XXXIX to 39", do: assert to_number("XXXIX") == 39
 
   test "converts L to 50", do: assert to_number("L") == 50
+
   test "converts C to 100", do: assert to_number("C") == 100
   test "converts CC to 200", do: assert to_number("CC") == 200
   test "converts CCC to 300", do: assert to_number("CCC") == 300
