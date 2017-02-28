@@ -35,6 +35,7 @@ defmodule RomanNumeralTest do
   test "converts XL to 40", do: assert to_number("XL") == 40
 
   test "converts L to 50", do: assert to_number("L") == 50
+  test "converts LXII to 62", do: assert to_number("LXII") == 62
 
   test "converts C to 100", do: assert to_number("C") == 100
   test "converts CC to 200", do: assert to_number("CC") == 200

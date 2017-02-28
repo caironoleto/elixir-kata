@@ -36,6 +36,13 @@ defmodule RomanNumeral do
     (String.length(string) + 1) * 1000
   end
 
+  defp do_to_number(string) do
+    string
+    |> String.split("", trim: true)
+    |> Enum.map(&to_number/1)
+    |> Enum.sum
+  end
+
   defp sum(factor, base, rest) do
     case rest do
       "" -> factor
