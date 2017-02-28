@@ -2,14 +2,14 @@ defmodule RomanNumeralTest do
   use ExUnit.Case
   import RomanNumeral, only: [to_number: 1]
 
-  test "converts 1 to I", do: assert to_number(1) == "I"
-  test "converts 2 to II", do: assert to_number(2) == "II"
-  test "converts 3 to III", do: assert to_number(3) == "III"
-  test "converts 4 to IV", do: assert to_number(4) == "IV"
-  test "converts 5 to V", do: assert to_number(5) == "V"
-  test "converts 10 to X", do: assert to_number(10) == "X"
-  test "converts 50 to X", do: assert to_number(50) == "L"
-  test "converts 100 to X", do: assert to_number(100) == "C"
-  test "converts 500 to X", do: assert to_number(500) == "D"
-  test "converts 1000 to X", do: assert to_number(1000) == "M"
+  test "converts I to 1", do: assert to_number("I") == 1
+  test "converts II to 2", do: assert to_number("II") == 2
+  test "converts III to 3", do: assert to_number("III") == 3
+  test "converts IV to 4", do: assert to_number("IV") == 4
+  test "converts V to 5", do: assert to_number("V") == 5
+  test "converts X to 10", do: assert to_number("X") == 10
+  test "converts L to 50", do: assert to_number("L") == 50
+  test "converts C to 100", do: assert to_number("C") == 100
+  test "converts D to 500", do: assert to_number("D") == 500
+  test "converts M to 1000", do: assert to_number("M") == 1000
 end
