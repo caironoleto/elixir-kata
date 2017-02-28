@@ -6,7 +6,6 @@ defmodule RomanNumeral do
   def to_number(string) do
     case string do
       "I" -> 1
-      "V" -> 5
       "L" -> 50
       "C" -> 100
       "D" -> 500
@@ -20,7 +19,10 @@ defmodule RomanNumeral do
   end
 
   defp do_to_number("V" <> string) do
-    to_number("V") + to_number(string)
+    case string do
+      "" -> 5
+      _ -> to_number("V") + to_number(string)
+    end
   end
 
   defp do_to_number("X" <> string) do
