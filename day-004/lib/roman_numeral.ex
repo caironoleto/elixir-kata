@@ -11,7 +11,8 @@ defmodule RomanNumeral do
 
   defp do_to_number("I" <> string) do
     case string do
-      "V" -> 4
+      "V" -> to_number(string) - to_number("I")
+      "X" -> to_number(string) - to_number("I")
       _ -> sum(1, "I", string)
     end
   end

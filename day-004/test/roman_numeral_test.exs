@@ -10,11 +10,15 @@ defmodule RomanNumeralTest do
   test "converts VI to 6", do: assert to_number("VI") == 6
   test "converts VII to 7", do: assert to_number("VII") == 7
   test "converts VIII to 8", do: assert to_number("VIII") == 8
+  test "converts IX to 9", do: assert to_number("IX") == 9
 
   test "converts X to 10", do: assert to_number("X") == 10
   test "converts XI to 11", do: assert to_number("XI") == 11
   test "converts XII to 12", do: assert to_number("XII") == 12
   test "converts XIII to 13", do: assert to_number("XIII") == 13
+  test "converts XIV to 14", do: assert to_number("XIV") == 14
+  test "converts XIX to 19", do: assert to_number("XIX") == 19
+
   test "converts XX to 20", do: assert to_number("XX") == 20
   test "converts XXI to 21", do: assert to_number("XXI") == 21
   test "converts XXII to 22", do: assert to_number("XXII") == 22
@@ -24,7 +28,7 @@ defmodule RomanNumeralTest do
   test "converts XXXII to 32", do: assert to_number("XXXII") == 32
   test "converts XXXIII to 33", do: assert to_number("XXXIII") == 33
 
-  test "converts L to50", do: assert to_number("L") == 50
+  test "converts L to 50", do: assert to_number("L") == 50
   test "converts C to 100", do: assert to_number("C") == 100
   test "converts CC to 200", do: assert to_number("CC") == 200
   test "converts CCC to 300", do: assert to_number("CCC") == 300
