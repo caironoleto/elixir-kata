@@ -16,7 +16,7 @@ defmodule RomanNumeral do
   defp do_to_number("I" <> string) do
     case string do
       "" -> 1
-      _ -> String.length(string) + 1
+      _ -> to_number("I") + to_number(string)
     end
   end
 
@@ -30,9 +30,7 @@ defmodule RomanNumeral do
   defp do_to_number("X" <> string) do
     case string do
       "" -> 10
-      "X" -> 20
-      "XX" -> 30
-      _ -> 10 + to_number(string)
+      _ -> to_number("X") + to_number(string)
     end
   end
 
