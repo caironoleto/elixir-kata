@@ -22,7 +22,10 @@ defmodule RomanNumeral do
   end
 
   defp do_to_number("X" <> string) do
-    sum(10, "X", string)
+    case string do
+      "L" -> to_number(string) - to_number("X")
+      _ -> sum(10, "X", string)
+    end
   end
 
   defp do_to_number("C" <> string) do
