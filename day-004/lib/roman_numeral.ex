@@ -28,10 +28,6 @@ defmodule RomanNumeral do
     end
   end
 
-  defp do_to_number("C" <> string) do
-    (String.length(string) + 1) * 100
-  end
-
   defp do_to_number("M" <> string) do
     (String.length(string) + 1) * 1000
   end
