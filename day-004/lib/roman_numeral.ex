@@ -29,7 +29,7 @@ defmodule RomanNumeral do
   end
 
   defp do_to_number("M" <> string) do
-    (String.length(string) + 1) * 1000
+    sum(1000, "M", string)
   end
 
   defp do_to_number(string) do
