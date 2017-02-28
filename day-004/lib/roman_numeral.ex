@@ -14,16 +14,8 @@ defmodule RomanNumeral do
     end
   end
 
-  defp do_to_number(string) do
-    map = %{
-      "I" => 1,
-      "X" => 10,
-      "C" => 100,
-      "M" => 1000,
-    }
-
-    first = String.first(string)
-
-    String.length(string) * map[first]
-  end
+  defp do_to_number("I" <> string), do: String.length(string) + 1
+  defp do_to_number("X" <> string), do: (String.length(string) + 1) * 10
+  defp do_to_number("C" <> string), do: (String.length(string) + 1) * 100
+  defp do_to_number("M" <> string), do: (String.length(string) + 1) * 1000
 end
