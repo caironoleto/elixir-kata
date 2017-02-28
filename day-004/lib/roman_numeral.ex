@@ -1,8 +1,4 @@
 defmodule RomanNumeral do
-  def to_number("IV") do
-    4
-  end
-
   def to_number(string) do
     case string do
       "L" -> 50
@@ -14,7 +10,10 @@ defmodule RomanNumeral do
   end
 
   defp do_to_number("I" <> string) do
-    sum(1, "I", string)
+    case string do
+      "V" -> 4
+      _ -> sum(1, "I", string)
+    end
   end
 
   defp do_to_number("V" <> string) do
