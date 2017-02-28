@@ -1,12 +1,29 @@
 defmodule RomanNumeral do
-  def to_number("I"), do: 1
-  def to_number("II"), do: 2
-  def to_number("III"), do: 3
   def to_number("IV"), do: 4
-  def to_number("V"), do: 5
-  def to_number("X"), do: 10
-  def to_number("L"), do: 50
-  def to_number("C"), do: 100
-  def to_number("D"), do: 500
-  def to_number("M"), do: 1000
+
+  def to_number(string) do
+    case string do
+      "I" -> 1
+      "V" -> 5
+      "X" -> 10
+      "L" -> 50
+      "C" -> 100
+      "D" -> 500
+      "M" -> 1000
+      _ -> do_to_number(string)
+    end
+  end
+
+  defp do_to_number(string) do
+    map = %{
+      "I" => 1,
+      "X" => 10,
+      "C" => 100,
+      "M" => 1000,
+    }
+
+    first = String.first(string)
+
+    String.length(string) * map[first]
+  end
 end
