@@ -14,7 +14,11 @@ defmodule RomanNumeralTest do
   test "converts X to 10", do: assert to_number("X") == 10
   test "converts XI to 11", do: assert to_number("XI") == 11
   test "converts XII to 12", do: assert to_number("XII") == 12
+  test "converts XIII to 13", do: assert to_number("XIII") == 13
   test "converts XX to 20", do: assert to_number("XX") == 20
+  test "converts XXI to 21", do: assert to_number("XXI") == 21
+  test "converts XXII to 22", do: assert to_number("XXII") == 22
+  test "converts XXIII to 23", do: assert to_number("XXIII") == 23
   test "converts XXX to 30", do: assert to_number("XXX") == 30
 
   test "converts L to50", do: assert to_number("L") == 50
