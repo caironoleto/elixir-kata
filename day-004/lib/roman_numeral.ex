@@ -15,6 +15,7 @@ defmodule RomanNumeral do
   end
 
   defp do_to_number("I" <> string), do: String.length(string) + 1
+  defp do_to_number("V" <> string), do: to_number("V") + to_number(string)
   defp do_to_number("X" <> string), do: (String.length(string) + 1) * 10
   defp do_to_number("C" <> string), do: (String.length(string) + 1) * 100
   defp do_to_number("M" <> string), do: (String.length(string) + 1) * 1000

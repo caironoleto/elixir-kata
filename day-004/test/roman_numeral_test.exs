@@ -7,6 +7,7 @@ defmodule RomanNumeralTest do
   test "converts III to 3", do: assert to_number("III") == 3
   test "converts IV to 4", do: assert to_number("IV") == 4
   test "converts V to 5", do: assert to_number("V") == 5
+  test "converts VI to 6", do: assert to_number("VI") == 6
   test "converts X to 10", do: assert to_number("X") == 10
   test "converts XX to 20", do: assert to_number("XX") == 20
   test "converts XXX to 30", do: assert to_number("XXX") == 30
