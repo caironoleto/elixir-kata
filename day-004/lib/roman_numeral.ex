@@ -14,24 +14,15 @@ defmodule RomanNumeral do
   end
 
   defp do_to_number("I" <> string) do
-    case string do
-      "" -> 1
-      _ -> to_number("I") + to_number(string)
-    end
+    sum(1, "I", string)
   end
 
   defp do_to_number("V" <> string) do
-    case string do
-      "" -> 5
-      _ -> to_number("V") + to_number(string)
-    end
+    sum(5, "V", string)
   end
 
   defp do_to_number("X" <> string) do
-    case string do
-      "" -> 10
-      _ -> to_number("X") + to_number(string)
-    end
+    sum(10, "X", string)
   end
 
   defp do_to_number("C" <> string) do
@@ -40,5 +31,12 @@ defmodule RomanNumeral do
 
   defp do_to_number("M" <> string) do
     (String.length(string) + 1) * 1000
+  end
+
+  defp sum(factor, base, rest) do
+    case rest do
+      "" -> factor
+      _ -> to_number(base) + to_number(rest)
+    end
   end
 end
