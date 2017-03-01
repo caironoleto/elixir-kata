@@ -1,21 +1,21 @@
 defmodule RomanNumeral do
   def to_number("I" <> string) do
     cond do
-      reduce?(string, ["V", "X", "L", "C", "D", "M"])-> to_number(string) - 1
+      reduce?(string, ["V", "X", "L", "C", "D", "M"]) -> to_number(string) - 1
       true -> sum(1, "I", string)
     end
   end
 
   def to_number("X" <> string) do
     cond do
-      reduce?(string, ["L", "C", "D", "M"])-> to_number(string) - 10
+      reduce?(string, ["L", "C", "D", "M"]) -> to_number(string) - 10
       true -> sum(10, "X", string)
     end
   end
 
   def to_number("C" <> string) do
     cond do
-      reduce?(string, ["D", "M"])-> to_number(string) - 100
+      reduce?(string, ["D", "M"]) -> to_number(string) - 100
       true -> sum(100, "C", string)
     end
   end
