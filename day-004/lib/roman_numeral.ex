@@ -1,22 +1,23 @@
 defmodule RomanNumeral do
   def to_number("I" <> string) do
-    sum(1, "I", string)
+    cond do
+      reduce?(string, ["V", "X", "L", "C", "D", "M"])-> to_number(string) - 1
+      true -> sum(1, "I", string)
+    end
   end
 
   def to_number("X" <> string) do
-    sum(10, "X", string)
-  end
-
-  def to_number("CD" <> string) do
-    to_number("D" <> string) - to_number("C")
-  end
-
-  def to_number("CM" <> string) do
-    to_number("M" <> string) - to_number("C")
+    cond do
+      reduce?(string, ["L", "C", "D", "M"])-> to_number(string) - 10
+      true -> sum(10, "X", string)
+    end
   end
 
   def to_number("C" <> string) do
-    sum(100, "C", string)
+    cond do
+      reduce?(string, ["D", "M"])-> to_number(string) - 100
+      true -> sum(100, "C", string)
+    end
   end
 
   def to_number("V" <> string) do
@@ -47,5 +48,11 @@ defmodule RomanNumeral do
       "" -> factor
       _ -> to_number(base) + to_number(rest)
     end
+  end
+
+  defp reduce?(string, list) do
+    first = String.first(string) || ""
+
+    String.contains?(first, list)
   end
 end
