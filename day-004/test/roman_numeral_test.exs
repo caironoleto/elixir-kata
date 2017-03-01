@@ -55,4 +55,6 @@ defmodule RomanNumeralTest do
 
   test "converts MM to 2000", do: assert to_number("MM") == 2000
   test "converts MMM to 3000", do: assert to_number("MMM") == 3000
+
+  test "converts MMMDCXLIII to 3643", do: assert to_number("MMMDCXLIII") == 3643
 end
